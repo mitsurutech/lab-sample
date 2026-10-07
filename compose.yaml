@@ -4,6 +4,8 @@
 #   psql -h db -U shop                 the database (password: shop)
 #   curl http://api:3000/notes         the API, once the notes table exists
 #
+# lab.open puts the API on the lab's page as a link, so it opens in a browser too.
+#
 # Only the named volume at the bottom is saved between sessions.
 
 services:
@@ -43,6 +45,7 @@ services:
           memory: 128M
     labels:
       lab.title: A web API over every table
+      lab.open: "3000"
 
 volumes:
   pgdata:

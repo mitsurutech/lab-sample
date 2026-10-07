@@ -69,6 +69,12 @@ Open the lab and, in the terminal:
    curl http://api:3000/notes
    ```
 
+5. **Open it in your browser.** On the lab's page, under **In your browser**, press **A web
+   API over every table** and add `/notes` to the address. It is the same API, reached from
+   outside the lab, and only you and your teachers can open it. From Postman or `curl` on
+   your own computer, send the lab's token, shown on the same page, in the `X-Lab-Token`
+   header.
+
 ## What the file shows
 
 | In `compose.yaml` | Why it is there |
@@ -79,6 +85,7 @@ Open the lab and, in the terminal:
 | `deploy.resources.limits.memory` | each service's share of the memory one copy may have |
 | `expose: 3000` | the API's port, inside the lab's network; nothing is published on the machine |
 | `labels: lab.title` | what the lab's page calls each service |
+| `labels: lab.open` | a port the lab's page links to, so it opens in a browser |
 
 Images only, nothing built: a lab can also build a service from a `Dockerfile` in its
 repository, which the platform does on GitHub when the lab is published.
