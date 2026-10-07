@@ -1,0 +1,48 @@
+# A database and a web API in front of it, for each student.
+#
+# In the terminal:
+#   psql -h db -U shop                 the database (password: shop)
+#   curl http://api:3000/notes         the API, once the notes table exists
+#
+# Only the named volume at the bottom is saved between sessions.
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: shop
+      POSTGRES_PASSWORD: shop
+      POSTGRES_DB: shop
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U shop"]
+      interval: 5s
+      retries: 10
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    labels:
+      lab.title: The shop's database
+
+  api:
+    image: postgrest/postgrest:v12.2.3
+    environment:
+      PGRST_DB_URI: postgres://shop:shop@db:5432/shop
+      PGRST_DB_ANON_ROLE: shop
+      PGRST_DB_SCHEMAS: public
+    expose:
+      - "3000"
+    depends_on:
+      db:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+    labels:
+      lab.title: A web API over every table
+
+volumes:
+  pgdata:
