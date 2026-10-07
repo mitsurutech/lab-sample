@@ -47,14 +47,27 @@ Open the lab and, in the terminal:
    curl 'http://api:3000/notes?order=id.desc'
    ```
 
-3. **Stop the lab and start it again.** The notes are still there, because the database
-   keeps its files in the named volume `pgdata`, and named volumes are what the platform
-   saves between sessions.
+3. **See what lasts.** Write one file in your home folder and one outside it:
 
-4. **Now change something that is not in a volume.** Anything written anywhere else in a
-   container is gone when the lab stops. That is not a quirk of the platform: it is how
-   containers behave in production, and the reason every real deployment decides what goes
-   in a volume.
+   ```
+   echo kept > ~/kept.txt
+   echo gone > /tmp/gone.txt
+   ```
+
+   Stop the lab and start it again. The notes are still there, because the database keeps
+   its files in the named volume `pgdata`, and so is `~/kept.txt`, because the platform saves
+   your home folder too. `/tmp/gone.txt` is not: anything outside a volume goes when a
+   container stops. That is not a quirk of the platform: it is how containers behave in
+   production, and the reason every real deployment decides what goes in a volume.
+
+4. **Back it up and restore it.**
+
+   ```
+   pg_dump -h db -U shop shop > ~/backup.sql
+   psql -h db -U shop -c 'drop table notes'
+   psql -h db -U shop -f ~/backup.sql
+   curl http://api:3000/notes
+   ```
 
 ## What the file shows
 
