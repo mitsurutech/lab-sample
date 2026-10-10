@@ -1,11 +1,14 @@
-# A lab: a database, and a web API in front of it
+# PostgreSQL and PostgREST with Docker Compose: a lab for teaching databases and REST APIs
 
-A sample lab for the [MitsuruTech Learning Platform](https://mitsurutech.co.uk). Each
-student gets their own Postgres and their own [PostgREST](https://postgrest.org), which
-turns every table in the database into a web API. They work in a terminal beside the two,
-which has `psql` and `curl`.
+A ready-made **Postgres + PostgREST** lab for classrooms, from the
+[MitsuruTech Learning Platform](https://mitsurutech.co.uk/learning), where schools and
+colleges give every student their own databases, containers and terminal in the browser.
+Each student gets their own PostgreSQL and their own [PostgREST](https://postgrest.org),
+which turns every table in the database into a REST API. They work in a terminal beside the
+two, which has `psql` and `curl`.
 
-The whole lab is one file, `compose.yaml`. It runs the same on your own machine:
+The whole lab is one `docker-compose` file, `compose.yaml`. It runs the same on your own
+machine:
 
 ```
 docker compose up
@@ -15,11 +18,18 @@ docker compose up
 
 Make a task of type **Lab**, choose **In a GitHub repository** and press **Use the
 sample**, or fork this repository and point the lab at your fork to change it. Publish, and
-every student's copy starts from the commit you published.
+every student's copy starts from the commit you published. The help manual's
+[guide to container labs](https://mitsurutech.co.uk/help/labs) covers the rest: what a
+compose file may say, how much memory a copy gets, and how teachers watch and take over a
+student's terminal.
+
+No college account yet? [Your first year is free](https://mitsurutech.co.uk/pricing) for up
+to 50 students, and [signing up](https://mitsurutech.co.uk/signup) takes an email address.
 
 ## The lesson it was written for
 
-Open the lab and, in the terminal:
+Open the lab and, in the terminal (new to the shell? Start with the
+[Linux terminal guide](https://mitsurutech.co.uk/help/linux-terminal)):
 
 1. **Talk to the database by name.** Every service is reachable by its name on the lab's
    own network, as it would be in production:
@@ -89,6 +99,20 @@ Open the lab and, in the terminal:
 
 Images only, nothing built: a lab can also build a service from a `Dockerfile` in its
 repository, which the platform does on GitHub when the lab is published.
+
+## More labs
+
+- [lab-mysql-phpmyadmin](https://github.com/mitsurutech/lab-mysql-phpmyadmin): MySQL, with
+  phpMyAdmin already signed in to it.
+
+## About
+
+Made by [Mitsuru Technologies](https://mitsurutech.co.uk) for the
+[MitsuruTech Learning Platform](https://mitsurutech.co.uk/learning): Python, Java, Go,
+Node, SQL and Linux in the browser for schools and colleges, with container labs, web apps
+deployed from GitHub, AWS's S3, DynamoDB and SQS with no AWS account, and quizzes that mark
+themselves. Try code with no account in the
+[playground](https://mitsurutech.co.uk/playground).
 
 ## Licence
 
