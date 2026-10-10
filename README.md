@@ -102,6 +102,8 @@ repository, which the platform does on GitHub when the lab is published.
 
 ## More labs
 
+- [lab-git-gitea](https://github.com/mitsurutech/lab-git-gitea): Git and Gitea, to clone,
+  commit and push to a Git server of your own and see it in the web interface.
 - [lab-mysql-phpmyadmin](https://github.com/mitsurutech/lab-mysql-phpmyadmin): MySQL, with
   phpMyAdmin already signed in to it.
 
