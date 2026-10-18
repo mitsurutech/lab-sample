@@ -1,5 +1,7 @@
 # PostgreSQL and PostgREST with Docker Compose: a lab for teaching databases and REST APIs
 
+[English](README.md) | [Français](README.fr.md) | [日本語](README.ja.md) | [Español](README.es.md)
+
 A ready-made **Postgres + PostgREST** lab for classrooms, from the
 [MitsuruTech Learning Platform](https://mitsurutech.co.uk/learning), where schools and
 colleges give every student their own databases, containers and terminal in the browser.
@@ -18,8 +20,8 @@ docker compose up
 
 Make a task of type **Lab**, choose **In a GitHub repository** and press **Use the
 sample**, or fork this repository and point the lab at your fork to change it. Publish, and
-every student's copy starts from the commit you published. The help manual's
-[guide to container labs](https://mitsurutech.co.uk/help/labs) covers the rest: what a
+every student's copy starts from the commit you published. The help manual has [a page for this lab](https://mitsurutech.co.uk/help/lab-database-api) and a
+[guide to container labs](https://mitsurutech.co.uk/help/labs) that covers the rest: what a
 compose file may say, how much memory a copy gets, and how teachers watch and take over a
 student's terminal.
 
@@ -109,7 +111,7 @@ repository, which the platform does on GitHub when the lab is published.
 
 ## About
 
-Made by [Mitsuru Technologies](https://mitsurutech.co.uk) for the
+Made by [Mitsuru Technologies Ltd](https://mitsurutech.co.uk) (registered in England & Wales, company number 16755264) for the
 [MitsuruTech Learning Platform](https://mitsurutech.co.uk/learning): Python, Java, Go,
 Node, SQL and Linux in the browser for schools and colleges, with container labs, web apps
 deployed from GitHub, AWS's S3, DynamoDB and SQS with no AWS account, and quizzes that mark
@@ -118,4 +120,4 @@ themselves. Try code with no account in the
 
 ## Licence
 
-MIT. Copy it, change it, teach with it.
+This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). You may share it and adapt it for learning and teaching, if you credit Mitsuru Technologies Ltd, do not use it commercially, and share anything you make from it under the same licence. The full text is in the `LICENSE` file.
