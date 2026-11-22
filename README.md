@@ -1,6 +1,6 @@
 # PostgreSQL and PostgREST with Docker Compose: a lab for teaching databases and REST APIs
 
-[English](README.md) | [Français](README.fr.md) | [日本語](README.ja.md) | [Español](README.es.md)
+[English](README.md) | [Français](README.fr.md) | [Español](README.es.md) | [日本語](README.ja.md) | [Deutsch](README.de.md)
 
 A ready-made **Postgres + PostgREST** lab for classrooms, from the
 [MitsuruTech Learning Platform](https://mitsurutech.co.uk/learning), where schools and

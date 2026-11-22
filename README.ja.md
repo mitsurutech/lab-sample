@@ -1,6 +1,6 @@
 # PostgreSQL と PostgREST を Docker Compose で：データベースと REST API を教えるためのラボ
 
-[English](README.md) | [Français](README.fr.md) | [日本語](README.ja.md) | [Español](README.es.md)
+[English](README.md) | [Français](README.fr.md) | [Español](README.es.md) | [日本語](README.ja.md) | [Deutsch](README.de.md)
 
 教室向けにすぐ使える **Postgres + PostgREST** のラボです。
 [MitsuruTech 学習プラットフォーム](https://mitsurutech.co.uk/ja/learning)のもので、学校やカレッジでは、
